@@ -17,3 +17,9 @@ function drawSnakePart(snakePart) {
 function drawSnake() {
     snake.forEach(drawSnakePart);
 }
+
+function advanceSnake() {
+    const head = {x: snake[0].x + dx, y: snake[0].y + dy};
+    snake.unshift(head);
+    snake.pop();
+}
